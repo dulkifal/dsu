@@ -12,16 +12,14 @@ export default function Home() {
         <title>DSU 2022-23</title>
         <meta name="description" content="Darul huda Students Union" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/dhlogo.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={s.main}>
         <div
           className={s.description}
           style={{
             backgroundImage: `url(${bg})`,
-
             backgroundSize: "cover",
-
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -37,7 +35,7 @@ export default function Home() {
         </div>
         <section>
           <div className={s.about}>
-            <h1>About Us</h1>
+            <h2>About Us</h2>
             <p>
               Welcome to Darul Huda Students’ Union, DSU DHIU was founded in
               1406 H/ 1986 at Malappuram, Kerala, first as an Islamic academy
@@ -64,11 +62,9 @@ export default function Home() {
                 DHIU aims to be the bastion of expertise in Islamic education that they can restore the dynamic role and educational superiority of past Muslim society in all intellectual programs and that seeks to rekindle the spirit of scholarship in Islamic sciences in the era of ever- changing society due to the innovative growth of modern sciences.
               </p>
             </div>
-
           </div>
         </section>
         <Unions />
-         
         <section>
           <div className={s.acivities}>
             <h2> Acivities</h2>
@@ -100,13 +96,10 @@ export default function Home() {
             </div>
             <button>View All</button>
           </div>
-
-
         </section>
         <section>
           <CoreCimmity />
         </section>
-
       </main>
     </>
   );

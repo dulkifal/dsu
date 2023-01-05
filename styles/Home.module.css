@@ -27,28 +27,37 @@
   justify-content: center;
   align-items: center;
   margin-top: -7rem;
+  padding: 1rem;
 }
 
 .about {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   margin-top: -7rem;
   height: 80vh;
   background: #005A62;
   color: #fff;
+  padding-top: 2rem;
   
+}
+.about h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+  /* margin-bottom: 1rem; */
 }
 .about p{
  
   width: 450px;
   text-align: center;
+  font-weight: 100;
   
   
 }
 .about button {
+  margin-top: 2rem;
   color: #005A62;
   padding: 10px ;
   border: 1px solid #fff;
@@ -86,16 +95,20 @@ text-align: justify;
 }
 
 .acivities{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: 1rem;
   padding: 2rem;
+  
+}
+.acivities h2{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 .acivities .acivity{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -104,16 +117,25 @@ text-align: justify;
 }
 .acivities .acivity div{
    background: #D9D9D9;
-  width: 20rem;
+  max-width: 250px;
+  margin: 0 auto;
   height: 300px;
   border-radius: 30px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-   
-   
   font-size: 1rem;
   font-weight: 400;
   color: #000;
+}
+
+.acivities button{
+   justify-self: center;
+   
+  color: #005A62;
+  padding: 10px ;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: 700px;
 }
