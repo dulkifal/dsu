@@ -1,0 +1,122 @@
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.navlinks li {
+  list-style: none;
+}
+.navlinks ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.navlinks a {
+  color: #005a62;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* unions */
+
+.unions{
+   
+   padding: 2rem;
+  background: #005A62;
+  color: #fff;
+}
+.unions h2{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  
+}
+.union {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+ 
+  padding: 2rem 0;
+
+}
+.union div{
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  max-width: 250px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+/* core commity */
+
+.coreCommity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: #fff;
+
+  background-color: #005a62;
+  
+}
+.coreCommity h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+   
+  transition: all 0.3s ease;
+}
+.coreCommity .members {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 0 2rem;
+  gap: 1rem;
+}
+.members > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.members > div  img {
+  width: 150px;
+  height: 180px;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+}
