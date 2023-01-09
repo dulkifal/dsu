@@ -131,7 +131,10 @@ text-align: justify;
 }
 
 .acivities button{
-   justify-self: center;
+      width: 10%;
+    display: block;
+    margin: auto;
+     
    
   color: #005A62;
   padding: 10px ;
