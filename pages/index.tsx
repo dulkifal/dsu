@@ -94,7 +94,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <button>View All</button>
+            <button type="button">View All</button>
           </div>
         </section>
         <section>
