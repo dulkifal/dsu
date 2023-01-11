@@ -4,8 +4,15 @@ import s from "../styles/Home.module.css";
 import bg from "../public/dh.png";
 import { Unions } from "../compo/unions";
 import { CoreCimmity } from "../compo/coreCommity";
+import { useState } from "react";
 
 export default function Home() {
+  const [login, setLogin] = useState(false);
+
+  const openLogin = () => {
+    setLogin(!login);
+  };
+   
   return (
     <>
       <Head>
@@ -45,9 +52,29 @@ export default function Home() {
               status with international recognition from various Islamic
               university boards.
             </p>
-            <button> Guest Login </button>
+            <button onClick={()=>openLogin()}>  Login </button>
           </div>
         </section>
+  {
+    login &&       <section  >
+          <div className={s.loginPage}>
+            <button onClick={()=>setLogin()}>back</button>
+            <div className={s.form}>
+           
+              <form className={s.loginForm}>
+                <input type="text" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <button>login</button>
+                <p className={s.message}>
+                  forgot password? <a href="#">click here</a>
+                  </p>
+              </form>
+              </div>
+
+
+          </div>
+        </section>
+  }
         <section>
           <div className={s.mission}>
             <div>

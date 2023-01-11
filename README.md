@@ -1,5 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project  
 for DSU (Darul-huda Students Union)
+in progress ......
 
 
 ## UI designded in Fiqma

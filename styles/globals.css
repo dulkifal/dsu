@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+ 
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,12 +14,11 @@ body {
 }
 
 body {
- font-family : "Montserrat"
+ font-family : "Montserrat", sans-serif;
+ 
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
- 
