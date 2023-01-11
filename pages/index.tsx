@@ -5,6 +5,7 @@ import bg from "../public/dh.png";
 import { Unions } from "../compo/unions";
 import { CoreCimmity } from "../compo/coreCommity";
 import { useState } from "react";
+import Footer  from "../compo/footer";
 
 export default function Home() {
   const [login, setLogin] = useState(false);
@@ -12,7 +13,7 @@ export default function Home() {
   const openLogin = () => {
     setLogin(!login);
   };
-   
+
   return (
     <>
       <Head>
@@ -52,41 +53,49 @@ export default function Home() {
               status with international recognition from various Islamic
               university boards.
             </p>
-            <button onClick={()=>openLogin()}>  Login </button>
+            <button onClick={() => openLogin()}> Login </button>
           </div>
         </section>
-  {
-    login &&       <section  >
-          <div className={s.loginPage}>
-            <button onClick={()=>setLogin()}>back</button>
-            <div className={s.form}>
-           
-              <form className={s.loginForm}>
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <button>login</button>
-                <p className={s.message}>
-                  forgot password? <a href="#">click here</a>
+        {login && (
+          <section>
+            <div className={s.loginPage}>
+              <button onClick={() => openLogin()}>back</button>
+              <div className={s.form}>
+                <form className={s.loginForm}>
+                  <input type="text" placeholder="username" />
+                  <input type="password" placeholder="password" />
+                  <button>login</button>
+                  <p className={s.message}>
+                    forgot password? <a href="#">click here</a>
                   </p>
-              </form>
+                </form>
               </div>
-
-
-          </div>
-        </section>
-  }
+            </div>
+          </section>
+        )}
         <section>
           <div className={s.mission}>
             <div>
               <h1>Our Mission</h1>
               <p>
-                To develop an Islamic educational framework in order to prepare religious scientists (‘Ulama) who acquire, practice and propagate Islam, being alert of their ultimate responsibilities towards Almighty Allah and towards themselves, family, institution , society , surroundings and private and public resources and to make them capable of competing the shifting trends of modern education.
+                To develop an Islamic educational framework in order to prepare
+                religious scientists (‘Ulama) who acquire, practice and
+                propagate Islam, being alert of their ultimate responsibilities
+                towards Almighty Allah and towards themselves, family,
+                institution , society , surroundings and private and public
+                resources and to make them capable of competing the shifting
+                trends of modern education.
               </p>
             </div>
             <div>
               <h1>Our Vission</h1>
               <p>
-                DHIU aims to be the bastion of expertise in Islamic education that they can restore the dynamic role and educational superiority of past Muslim society in all intellectual programs and that seeks to rekindle the spirit of scholarship in Islamic sciences in the era of ever- changing society due to the innovative growth of modern sciences.
+                DHIU aims to be the bastion of expertise in Islamic education
+                that they can restore the dynamic role and educational
+                superiority of past Muslim society in all intellectual programs
+                and that seeks to rekindle the spirit of scholarship in Islamic
+                sciences in the era of ever- changing society due to the
+                innovative growth of modern sciences.
               </p>
             </div>
           </div>
@@ -97,7 +106,12 @@ export default function Home() {
             <h2> Acivities</h2>
             <div className={s.acivity}>
               <div className={s.acivity1}>
-                <Image src={"/dsuLogo.png"} width={150} height={200} alt="logo" />
+                <Image
+                  src={"/dsuLogo.png"}
+                  width={150}
+                  height={200}
+                  alt="logo"
+                />
                 <h1>Acivity 1</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -105,7 +119,12 @@ export default function Home() {
                 </p>
               </div>
               <div className={s.acivity2}>
-                <Image src={"/dsuLogo.png"} width={150} height={200} alt="logo" />
+                <Image
+                  src={"/dsuLogo.png"}
+                  width={150}
+                  height={200}
+                  alt="logo"
+                />
                 <h1>Acivity 2</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -113,7 +132,12 @@ export default function Home() {
                 </p>
               </div>
               <div className={s.acivity3}>
-                <Image src={"/dsuLogo.png"} width={150} height={200} alt="logo" />
+                <Image
+                  src={"/dsuLogo.png"}
+                  width={150}
+                  height={200}
+                  alt="logo"
+                />
                 <h1>Acivity 3</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -127,6 +151,7 @@ export default function Home() {
         <section>
           <CoreCimmity />
         </section>
+        <Footer />
       </main>
     </>
   );
