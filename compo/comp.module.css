@@ -32,27 +32,25 @@
 
 /* unions */
 
-.unions{
-   padding: 2rem;
-  background: #005A62;
+.unions {
+  padding: 2rem;
+  background: #005a62;
   color: #fff;
 }
-.unions h2{
+.unions h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  
 }
 .union {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2rem;
- 
-  padding: 2rem 0;
 
+  padding: 2rem 0;
 }
-.union div{
-  background-color: #D9D9D9;
+.union div {
+  background-color: #d9d9d9;
   border-radius: 30px;
   max-width: 250px;
   padding: 1rem;
@@ -60,7 +58,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   
+
   font-size: 1rem;
   font-weight: 400;
   color: #000;
@@ -79,18 +77,17 @@
   color: #fff;
 
   background-color: #005a62;
-  
 }
 .coreCommity h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-   
+
   transition: all 0.3s ease;
 }
 .coreCommity .members {
- display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 2rem;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +111,7 @@
   transition: all 0.3s ease;
 }
 
-.members > div  img {
+.members > div img {
   width: 150px;
   height: 180px;
   border-radius: 10%;
@@ -130,20 +127,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 2rem;
- 
-  
 }
 .footerContent {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 2rem;
-   
-  
 }
 .footerContentLeft {
   display: flex;
@@ -153,7 +144,4 @@
   width: 50%;
   height: 100%;
   padding: 2rem;
-   
-  
 }
-

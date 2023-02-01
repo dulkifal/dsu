@@ -7,12 +7,12 @@ export const CoreCimmity = () => {
     {
       name: "Abdul Muhsin",
       position: "President",
-      image: image,
+      image:  '/committee/shahbas.jpg',
     },
     {
       name: "Abdul Muhsin",
-      position: "President",
-      image: image,
+      position: "Vice President",
+      image: '/committee/jishad.jpg',
     },
     {
       name: "Abdul Muhsin",
