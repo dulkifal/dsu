@@ -5,19 +5,19 @@ import s from "./comp.module.css";
 export const CoreCimmity = () => {
   const members = [
     {
-      name: "Abdul Muhsin",
+      name: "Shahbas",
       position: "President",
       image:  '/committee/shahbas.jpg',
     },
     {
-      name: "Abdul Muhsin",
+      name: "Jishad",
       position: "Vice President",
       image: '/committee/jishad.jpg',
     },
     {
-      name: "Abdul Muhsin",
-      position: "President",
-      image: image,
+      name: "Mohammed Jaseel P",
+      position: "General Secretary",
+      image:  '/committee/jaseel.jpg',
     },
     {
       name: "Abdul Muhsin",
