@@ -1,0 +1,77 @@
+.aboutPage {
+  min-height: 100vh;
+  padding-top: 100px; /* Space for Navbar */
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerArea {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerArea::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('/dh.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.headerArea h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.headerArea p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  opacity: 0.9;
+}
+
+.contentArea {
+  max-width: 900px;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.glassCard {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  box-shadow: 0 10px 40px rgba(10, 77, 104, 0.08);
+  margin-bottom: 3rem;
+}
+
+.glassCard h2 {
+  font-size: 2rem;
+  color: var(--primary-teal);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.glassCard p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+}

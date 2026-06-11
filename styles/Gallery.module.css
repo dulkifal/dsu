@@ -1,0 +1,74 @@
+.galleryPage {
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerArea {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--primary-teal));
+  color: var(--white);
+  text-align: center;
+}
+
+.headerArea h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.galleryContainer {
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 196, 255, 0.2);
+  z-index: 10;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Fallback for when we don't have images yet */
+.placeholderText {
+  position: absolute;
+  font-weight: 600;
+  color: var(--primary-teal);
+  background: rgba(255,255,255,0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
