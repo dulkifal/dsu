@@ -1,14 +1,14 @@
 .unionsSection {
-  padding: 5rem 2rem;
-  background-color: var(--glass-bg);
+  padding: 6rem 2rem;
+  background-color: var(--bg-color);
 }
 
 .unionsHeader {
   text-align: center;
   color: var(--primary-teal);
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
 }
 
 .unions {
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -26,30 +26,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--white);
-  border-radius: 20px;
-  padding: 2.5rem 1.5rem;
-  width: 300px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(10, 77, 104, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: center;
 }
 
 .union:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(10, 77, 104, 0.15);
 }
 
 .union h2 {
   color: var(--primary-teal);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .union p {
   color: var(--text-gray);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }

@@ -2,14 +2,23 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--primary-teal);
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, var(--primary-teal), var(--primary-teal-light), var(--accent-cyan), var(--primary-teal-dark));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px; /* To account for absolute navbar */
+  padding-top: 80px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .heroBackground {
@@ -21,7 +30,8 @@
   background-image: url('/dh.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.2;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
   z-index: 0;
 }
 
@@ -34,37 +44,56 @@
   text-align: center;
   color: var(--white);
   max-width: 800px;
-  padding: 2rem;
+  padding: 3rem;
+  /* Glassmorphism panel for hero text */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .heroContent h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .heroContent p {
-  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 2.5rem;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
 .guestLoginBtn {
-  background-color: var(--white);
-  color: var(--primary-teal);
-  padding: 12px 32px;
-  font-size: 1rem;
-  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--primary-teal-light));
+  color: var(--white);
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
   border: none;
-  border-radius: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 40px;
+  transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 196, 255, 0.3);
 }
 
 .guestLoginBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 196, 255, 0.5);
 }
 
 /* login area / modal */
@@ -74,12 +103,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(10, 77, 104, 0.6);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   animation: fadeIn 0.3s ease-out;
 }
 
@@ -89,20 +118,22 @@
 }
 
 .loginCard {
-  background-color: var(--white);
-  border-radius: 20px;
-  padding: 3rem 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
   width: 100%;
-  max-width: 420px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
 }
 
 .loginTitle {
   color: var(--primary-teal);
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -110,7 +141,7 @@
 .loginForm {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .inputGroup {
@@ -121,61 +152,69 @@
 }
 
 .inputGroup label {
-  font-size: 0.9rem;
-  color: var(--primary-teal);
+  font-size: 0.95rem;
+  color: var(--text-gray);
   font-weight: 600;
 }
 
 .inputGroup input {
-  padding: 12px 16px;
-  border: 1px solid #ccd6d6;
-  border-radius: 8px;
+  padding: 14px 18px;
+  border: 2px solid #E2E8F0;
+  border-radius: 12px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #F8FAFC;
 }
 
 .inputGroup input:focus {
-  border-color: var(--primary-teal);
+  border-color: var(--accent-cyan);
+  background-color: var(--white);
+  box-shadow: 0 0 0 4px rgba(0, 196, 255, 0.1);
 }
 
 .rememberRow {
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-size: 0.95rem;
+  color: var(--text-gray);
 }
 
 .rememberRow input {
-  margin-right: 8px;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
   accent-color: var(--primary-teal);
 }
 
 .submitBtn {
-  background-color: var(--primary-teal);
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-light));
   color: var(--white);
-  padding: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 14px;
+  font-size: 1.15rem;
+  font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .submitBtn:hover {
-  background-color: var(--primary-teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(10, 77, 104, 0.2);
 }
 
 .forgotLink {
-  text-align: right;
-  font-size: 0.85rem;
-  color: var(--primary-teal);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--primary-teal-light);
   text-decoration: none;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
 .forgotLink:hover {
   text-decoration: underline;
+  color: var(--accent-cyan);
 }

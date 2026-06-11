@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { HeroSection } from "../components/HeroSection";
+import { Announcements } from "../components/Announcements";
+import { QuickLinks } from "../components/QuickLinks";
 import { MissionVision } from "../components/MissionVision";
+import { StudentClubs } from "../components/StudentClubs";
 import { Unions } from "../components/Unions";
 import { Activities } from "../components/Activities";
 import { MapSection } from "../components/MapSection";
@@ -18,9 +21,12 @@ export default function Home() {
       </Head>
       <main>
         <HeroSection />
+        <Announcements />
+        <QuickLinks />
         <MissionVision />
-        <Unions />
+        <StudentClubs />
         <Activities />
+        <Unions />
         <MapSection />
         <CoreCommittee />
         <Footer />
