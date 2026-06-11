@@ -34,18 +34,17 @@ export const Unions = (
     },
   ];
   return (
-    <section>
+    <section className={s.unionsSection}>
+      <h2 className={s.unionsHeader}>Subordinate Unions</h2>
+
       <div className={s.unions}>
-        <h2>Our Subordinate Unions </h2>
-        <div className={s.union}>
-          {unions.map((union) => (
-            <div className={s.union1}>
-              <Image src={union.image} width={100} height={100} alt="logo" />
-              <h1>{union.name}</h1>
-              <p>{union.description}</p>
-            </div>
-          ))}
-        </div>
+        {unions.map((union, index) => (
+          <div key={index} className={s.union}>
+            <Image src={union.image} width={100} height={100} alt={union.name} />
+            <h2>{union.name}</h2>
+            <p>{union.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

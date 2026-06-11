@@ -18,8 +18,8 @@ export const Navbar = (
       <div className={s.navlinks}>
         <Image src="/dhlogo.png" width={30} height={30} alt="logo" />
         <ul>
-          {navArray.map((navItem) => (
-            <li>
+          {navArray.map((navItem, index) => (
+            <li key={index}>
               <a href={navItem.link as string}>{navItem.title}</a>
             </li>
           ))}

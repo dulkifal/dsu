@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-teal: #005a62;
+  --primary-teal-dark: #00454c;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --glass-bg: rgba(240, 245, 245, 0.8);
+}
 
 * {
   box-sizing: border-box;
@@ -11,14 +20,17 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
- font-family : "Montserrat", sans-serif;
- 
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }

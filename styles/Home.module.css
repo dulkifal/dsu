@@ -6,152 +6,336 @@
   /* align-items: center; */
 }
 
-.description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-.circle {
+.heroSection {
   position: relative;
-  border-radius: 50%;
-  width: 200px;
-  margin: 0 auto;
-  height: 200px;
-  background-color: #f0f0f0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-teal);
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: -7rem;
-  padding: 1rem;
+  justify-content: center;
+  padding-top: 80px; /* To account for absolute navbar */
 }
 
-.about {
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/dh.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-top: -7rem;
-  height: 80vh;
-  background: #005a62;
-  color: #fff;
-  padding-top: 2rem;
-}
-.about h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  /* margin-bottom: 1rem; */
-}
-.about p {
-  width: 450px;
   text-align: center;
-  font-weight: 100;
+  color: var(--white);
+  max-width: 800px;
+  padding: 2rem;
 }
-.about button {
-  margin-top: 2rem;
-  color: #005a62;
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  font-weight: 700px;
+
+.heroContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
-/* login area */
-.loginPage {
-  margin: 0 auto;
-  position: relative;
-  border-radius: 10%;
-  margin-top: -27rem;
+
+.heroContent p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.guestLoginBtn {
+  background-color: var(--white);
+  color: var(--primary-teal);
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guestLoginBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* login area / modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.loginCard {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  height: 50vh;
-  width: 50vw;
-  background: #f0f0f0;
-  padding-top: 2rem;
-  margin-top: -25rem;
 }
-.loginPage .loginForm {
+
+.loginTitle {
+  color: var(--primary-teal);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loginForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 1.2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+
+.inputGroup input {
+  padding: 12px 16px;
+  border: 1px solid #ccd6d6;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputGroup input:focus {
+  border-color: var(--primary-teal);
+}
+
+.rememberRow {
+  display: flex;
   align-items: center;
-  gap: 1rem;
-  color: #fff;
-  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.rememberRow input {
+  margin-right: 8px;
+  accent-color: var(--primary-teal);
+}
+
+.submitBtn {
+  background-color: var(--primary-teal);
+  color: var(--white);
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: var(--primary-teal-dark);
+}
+
+.forgotLink {
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--primary-teal);
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
 }
 
 .mission {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 3rem;
   justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  align-items: stretch;
+  padding: 4rem 2rem;
+  background-color: var(--white);
 }
-.mission div {
-  background: rgba(160, 165, 166, 0.24);
-  width: 20rem;
+
+.missionCard {
+  background: var(--glass-bg);
+  flex: 1 1 350px;
+  max-width: 450px;
   border-radius: 30px;
-  padding: 1rem;
+  padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
+.missionCard h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.missionCard p {
   font-size: 1rem;
   font-weight: 400;
-
-  line-height: 1.2;
+  line-height: 1.7;
+  color: var(--text-dark);
   text-align: justify;
 }
 
-.acivities {
-  font-size: 1rem;
-  padding: 2rem;
-}
-.acivities h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-.acivities .acivity {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-.acivities .acivity div {
-  background: #d9d9d9;
-  max-width: 250px;
-  margin: 0 auto;
-  height: 300px;
-  border-radius: 30px;
-  padding: 1rem;
+
+.activitiesSection {
+  padding: 5rem 2rem;
+  background-color: #f9fafa;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #000;
+  align-items: center;
 }
 
-.acivities button {
-  width: 10%;
-  display: block;
-  margin: auto;
+.activitiesHeader {
+  color: var(--primary-teal);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-  color: #005a62;
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  font-weight: 700px;
+.activityGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.activityCard {
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.activityCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.activityCard h2 {
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.activityCard p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.readMoreBtn {
+  color: var(--primary-teal);
+  background-color: transparent;
+  padding: 8px 0;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.readMoreBtn::after {
+  content: '→';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.readMoreBtn:hover::after {
+  transform: translateX(5px);
+}
+
+/* Map Section */
+.mapSection {
+  padding: 5rem 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mapHeader {
+  color: var(--primary-teal);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.mapImageWrapper {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mapImageWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

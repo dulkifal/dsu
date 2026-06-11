@@ -1,73 +1,32 @@
 import s from "./comp.module.css";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className={s.footer}>
       <div className={s.footerContent}>
-        <div className={s.footerContentLeft}>
-          <div>
-
-          <h3>DSU</h3>
+        <div className={`${s.footerColumn} ${s.footerLogo}`}>
+          <Image src="/dsuLogo.png" width={100} height={150} alt="DSU Logo" />
           <p>
-            Darul Huda Students’ Union, DSU DHIU was founded in 1406 H/ 1986 at
-            Malappuram, Kerala, first as an Islamic academy aiming to produce a
-            new generation of Muslim scholars capable of bearing the privileged
-            responsibility of Islamic propagation in modern era. It was later
-            upgraded to a private Islamic University status with international
-            recognition from various Islamic university boards.
+            Darul Huda Students' Union (DSU) is the student body of Darul Huda Islamic University, Malappuram, Kerala.
           </p>
-          </div>
-          <div> 
-          <h3> Address</h3>
-          <p>
-            Darul Huda Islamic University, P.O. Malappuram, Kerala, India
-          </p>
-
-          <ul>
-            <li>
-              <a href="#">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            </ul>
         </div>
+        <div className={s.footerColumn}>
+          <h2>Contact Us</h2>
+          <p><strong>Phone:</strong> +91 12345 67890</p>
+          <p><strong>Email:</strong> contact@dsu.example.com</p>
+          <p><strong>Address:</strong> DHIU Campus, Chemmad, Malappuram, Kerala, 676306</p>
         </div>
-        <div className={s.footerContentRight}>
-          <div>
-
-          <h3>Quick Links</h3>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
+        <div className={s.footerColumn}>
+          <h2>Follow Us</h2>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Twitter</a></p>
+          <p><a href="#">Instagram</a></p>
         </div>
-        <div>
-          <h3> Contact Us</h3>
-          <ul>
-            <li> social media links</li>
-            <li> social media links</li>
-            <li> social media links</li>
-            <li> social media links</li>
-            </ul>
-
-           
-          </div>
-      </div>
       </div>
       <div className={s.footerBottom}>
-        <p>© 2023 DSU. All rights reserved</p>
+        <p>&copy; {new Date().getFullYear()} Darul Huda Students' Union. All Rights Reserved.</p>
       </div>
     </footer>
   );
 }
-
