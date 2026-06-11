@@ -25,4 +25,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
  
 ## Deploy on Vercel
- https://dsu-dh.vercel.app/
+- Main: https://dsu-dh.vercel.app/
+- Archive (2022-23): https://dsu-2022-23.vercel.app/
