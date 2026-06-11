@@ -1,6 +1,5 @@
 .newsPage {
   min-height: 100vh;
-  padding-top: 100px;
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
@@ -9,9 +8,9 @@
 
 .headerArea {
   width: 100%;
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, var(--primary-teal), var(--accent-cyan-light));
-  color: var(--primary-teal-dark);
+  padding: 10rem 2rem 5rem 2rem;
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+  color: var(--white);
   text-align: center;
 }
 
@@ -19,7 +18,7 @@
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: var(--primary-teal-dark);
+  color: var(--white);
 }
 
 .newsContainer {
