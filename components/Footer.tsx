@@ -1,5 +1,6 @@
-import s from "./comp.module.css";
+import s from "./Footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
