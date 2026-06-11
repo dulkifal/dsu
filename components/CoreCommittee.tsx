@@ -1,9 +1,9 @@
 import Image from "next/image";
-import image from "../public/14733.jpg";
-import s from "./comp.module.css";
+import { Member } from "../types";
+import s from "./CoreCommittee.module.css";
 
-export const CoreCimmity = () => {
-  const members = [
+export const CoreCommittee = () => {
+  const members: Member[] = [
     { name: "Shahbas PK", role: "President", image: "/committee/shahbas.jpg" },
     { name: "Jaseel PK", role: "General Secretary", image: "/committee/jaseel.jpg" },
     { name: "Jishad", role: "Vice President", image: "/committee/jishad.jpg" },

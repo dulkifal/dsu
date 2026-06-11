@@ -1,12 +1,9 @@
 import Image from "next/image";
-import s from "./comp.module.css";
+import { Union } from "../types";
+import s from "./Unions.module.css";
 
-export const Unions = (
-  props: React.DetailedHTMLProps< React.HTMLAttributes<HTMLElement>, HTMLElement>
-
-) => {
-
-  const unions = [
+export const Unions = () => {
+  const unions: Union[] = [
     {
       name: "Union 1",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quibusdam.",
@@ -33,6 +30,7 @@ export const Unions = (
       image: "/dsuLogo.png",
     },
   ];
+
   return (
     <section className={s.unionsSection}>
       <h2 className={s.unionsHeader}>Subordinate Unions</h2>

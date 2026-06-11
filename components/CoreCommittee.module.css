@@ -1,0 +1,56 @@
+.coreCommitteeSection {
+  padding: 5rem 2rem;
+  background-color: var(--primary-teal);
+  color: var(--white);
+}
+
+.coreCommitteeHeader {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.membersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.memberCard:hover {
+  transform: translateY(-5px);
+}
+
+.memberImageWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.memberCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.memberCard p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
