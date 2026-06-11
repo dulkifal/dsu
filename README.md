@@ -3,7 +3,12 @@ for DSU (Darul-huda Students Union)
 in progress ......
 
 
-## UI designded in Fiqma
+## Language Composition
+- CSS: 60.7%
+- TypeScript: 39.1%
+- JavaScript: 0.2%
+
+## UI designed in Figma
 https://www.figma.com/file/OshJvt3fGwUImpV9wQog5I/DSU-UX?node-id=0%3A1&t=ZjHv2hhnowK7cCLF-0
 
 ## Getting Started
